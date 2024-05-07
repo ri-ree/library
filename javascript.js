@@ -1,3 +1,5 @@
+const container = document.querySelector('#books');
+
 function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
@@ -12,6 +14,7 @@ function Book(title, author, pages, read) {
 const myLibrary = [];
 
 const theHobbit = new Book("The Hobbit", "J.R.R Tolkien", "295", "not read yet");
+myLibrary.push(theHobbit);
 
 function addBookToLibrary(newBook, title, author, pages, read) {
     newBook = new Book(title, author, pages, read)
