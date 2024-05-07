@@ -7,3 +7,10 @@
     display: grid;
     background-color: rgb(82, 60, 67);
 }
+
+.books {
+    margin: 2px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: repeat(auto-fit, 1fr);
+}
