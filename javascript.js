@@ -16,14 +16,18 @@ const myLibrary = [];
 const theHobbit = new Book("The Hobbit", "J.R.R Tolkien", "295", "not read yet");
 myLibrary.push(theHobbit);
 
-function addBookToLibrary(newBook, title, author, pages, read) {
-    newBook = new Book(title, author, pages, read)
+function addBookToLibrary(title, author, pages, read) {
+    let newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
 };
 
 console.log(myLibrary);
 
-addBookToLibrary("One Day", "David Nichols", "448", "not read year");
+addBookToLibrary("One Day", "David Nichols", "448", "not read yet");
+
+addBookToLibrary("Tomie", "Junji Ito", "752", "not read yet");
+
+addBookToLibrary("Ill Wind", "Rachel Caine", "352", "read");
 
 console.log(myLibrary);
 
