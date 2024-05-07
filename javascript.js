@@ -26,3 +26,10 @@ console.log(myLibrary);
 addBookToLibrary("One Day", "David Nichols", "448", "not read year");
 
 console.log(myLibrary);
+
+for (const obj of myLibrary) {
+    let bookDisplay = document.createElement('div');
+    bookDisplay.textContent = "Hello World!";
+    bookDisplay.style.background = "rgb(209, 176, 187)";
+    container.appendChild(bookDisplay);
+}
