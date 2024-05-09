@@ -6,11 +6,20 @@
 .container {
     display: grid;
     background-color: rgb(82, 60, 67);
+    height: 100vh;
 }
 
-.books {
-    margin: 2px;
+#books {
+    margin: 5px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-rows: repeat(5, 100px);
+    gap: 5px;
+    height: 20px;
+    text-align: center;
+}
+
+#books > div {
+    display: grid;
+    align-content: center;
 }
