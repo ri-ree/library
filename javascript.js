@@ -21,19 +21,15 @@ function addBookToLibrary(title, author, pages, read) {
     myLibrary.push(newBook);
 };
 
-console.log(myLibrary);
-
 addBookToLibrary("One Day", "David Nichols", "448", "not read yet");
 
 addBookToLibrary("Tomie", "Junji Ito", "752", "not read yet");
 
 addBookToLibrary("Ill Wind", "Rachel Caine", "352", "read");
 
-console.log(myLibrary);
-
 for (const obj of myLibrary) {
     let bookDisplay = document.createElement('div');
-    bookDisplay.textContent = "Hello World!";
+    bookDisplay.textContent = obj.info();
     bookDisplay.style.background = "rgb(209, 176, 187)";
     container.appendChild(bookDisplay);
-}
+};
