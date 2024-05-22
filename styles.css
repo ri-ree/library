@@ -30,12 +30,27 @@
 }
 
 .form-main-container {
+    padding: 15px;
     display: grid;
     grid-template-rows: 40px 1fr 40px;
 }
 
 .form-container {
     display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.form-container > div {
+    display: grid;
+    grid-template-columns: 80px auto;
+}
+
+.form-container + div {
+    display: grid;
+    justify-content: end;
+    align-content: center;
 }
 
 form button {
