@@ -29,6 +29,20 @@
     margin-left: 10px;
 }
 
+.form-main-container {
+    display: grid;
+    grid-template-rows: 40px 1fr 40px;
+}
+
+.form-container {
+    display: grid;
+}
+
+form button {
+    height: 30px;
+    width: 50px;
+}
+
 #books {
     margin: 5px;
     display: grid;
