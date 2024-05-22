@@ -1,6 +1,7 @@
 const container = document.querySelector('#books');
 const btn = document.querySelector('#btn');
 const dialog = document.querySelector('dialog');
+const closeButton = document.querySelector('dialog button');
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -41,4 +42,8 @@ for (const obj of myLibrary) {
 
 btn.addEventListener("click", () => {
     dialog.showModal();
+});
+
+closeButton.addEventListener("click", () => {
+    dialog.close();
 });
