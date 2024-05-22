@@ -1,4 +1,6 @@
 const container = document.querySelector('#books');
+const btn = document.querySelector('#btn');
+const dialog = document.querySelector('dialog');
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -27,9 +29,16 @@ addBookToLibrary("Tomie", "Junji Ito", "752", "not read yet");
 
 addBookToLibrary("Ill Wind", "Rachel Caine", "352", "read");
 
+addBookToLibrary("The Lord of The Rings", "J.R.R Tolkien", "1216", "not read yet");
+
 for (const obj of myLibrary) {
     let bookDisplay = document.createElement('div');
     bookDisplay.textContent = obj.info();
     bookDisplay.style.background = "rgb(209, 176, 187)";
+    bookDisplay.style.padding = "10px";
     container.appendChild(bookDisplay);
 };
+
+btn.addEventListener("click", () => {
+    dialog.showModal();
+});
