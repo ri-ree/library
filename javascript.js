@@ -2,6 +2,10 @@ const container = document.querySelector('#books');
 const btn = document.querySelector('#btn');
 const dialog = document.querySelector('dialog');
 const closeButton = document.querySelector('dialog button');
+const formTitle = document.querySelector('#title');
+const formAuthor = document.querySelector('#author');
+const formPages = document.querySelector('#pages');
+const formRead = document.querySelector('#read');
 
 function Book(title, author, pages, read) {
     this.title = title;
