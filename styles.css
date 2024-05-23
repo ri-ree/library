@@ -47,10 +47,14 @@
     grid-template-columns: 80px auto;
 }
 
-.form-container + div {
+.buttons {
     display: grid;
-    justify-content: end;
+    grid-template-columns: 1fr 1fr;
     align-content: center;
+}
+
+.buttons > div:nth-child(2) {
+    justify-self: end;
 }
 
 form button {
