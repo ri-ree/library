@@ -19,35 +19,39 @@ const myLibrary = [];
 
 function addBookToLibrary(title, author, pages, read) {
     let newBook = new Book(title, author, pages, read);
-    myLibrary.push(newBook);
+    myLibrary.unshift(newBook);
 };
 
 submitButton.addEventListener("click", submitClick, false);
 
-function addedBook() {
+/*function addedBook() {
     for (const obj of myLibrary) {
         let bookDisplay = document.createElement('div');
         bookDisplay.textContent = obj.info();
         bookDisplay.style.background = "rgb(209, 176, 187)";
         bookDisplay.style.padding = "10px";
         container.appendChild(bookDisplay);
-        console.log(obj);
     };
-}
+}*/
 
 function submitClick(event) {
+
+    event.preventDefault();
+
     let formTitle = document.getElementById('title').value;
     let formAuthor = document.getElementById('author').value;
     let formPages = document.querySelector('#pages').value;
     let formRead = document.querySelector('#read').value;
+
     addBookToLibrary(formTitle, formAuthor, formPages, formRead);
-    console.log(myLibrary);
-    event.preventDefault();
-    addedBook();
-    console.log(formTitle);
-    console.log(formAuthor);
-    console.log(formPages);
-    console.log(formRead);
+
+    let bookDisplay = document.createElement('div');
+        bookDisplay.textContent = myLibrary[0].info();
+        bookDisplay.style.background = "rgb(209, 176, 187)";
+        bookDisplay.style.padding = "10px";
+
+    container.appendChild(bookDisplay);
+    /*addedBook();*/
 };
 
 
