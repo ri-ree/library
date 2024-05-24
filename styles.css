@@ -39,7 +39,7 @@
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .form-container > div {
@@ -68,7 +68,7 @@ form button {
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     grid-template-rows: auto;
     gap: 5px;
-    height: 200px;
+    height: minmax(200px, 500px);
     text-align: center;
 }
 
