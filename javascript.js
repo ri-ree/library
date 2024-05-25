@@ -13,6 +13,9 @@ function Book(title, author, pages, read) {
         return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`;
         /*this.title + " by " + this.author + ", " + this.pages + " pages, " + this.read;*/
     }
+    this.button = function() {
+        this.read = "read";
+    };
 };
 
 const myLibrary = [];
@@ -49,6 +52,12 @@ function submitClick(event) {
     bookDisplay.style.background = "rgb(209, 176, 187)";
     bookDisplay.style.padding = "10px";
 
+    let readButtonDiv = document.createElement('div');
+    let readButton = document.createElement('button');
+    readButton.textContent = 'Read';
+    readButtonDiv.appendChild(readButton);
+    bookDisplay.appendChild(readButtonDiv);
+
     let buttonDiv = document.createElement('div');
     let deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
@@ -56,10 +65,10 @@ function submitClick(event) {
     bookDisplay.appendChild(buttonDiv);
 
     deleteButton.addEventListener("click", () => {
-    /*bookDisplay.remove();*/
-    if (bookDisplay.parentNode) {
-        bookDisplay.parentNode.removeChild(bookDisplay);
-      }
+        /*bookDisplay.remove();*/
+        if (bookDisplay.parentNode) {
+            bookDisplay.parentNode.removeChild(bookDisplay);
+        };
     });
 
     let displayDiv = document.createElement('div');
