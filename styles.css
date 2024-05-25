@@ -74,5 +74,10 @@ form button {
 
 #books > div {
     display: grid;
-    align-content: center;
+}
+
+#books > div > div:nth-child(1) {
+    display: grid;
+    justify-content: end;
+    align-content: start;
 }
