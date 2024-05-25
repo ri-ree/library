@@ -46,14 +46,20 @@ function submitClick(event) {
     addBookToLibrary(formTitle, formAuthor, formPages, formRead);
 
     let bookDisplay = document.createElement('div');
-        bookDisplay.textContent = myLibrary[0].info();
-        bookDisplay.style.background = "rgb(209, 176, 187)";
-        bookDisplay.style.padding = "10px";
+    bookDisplay.style.background = "rgb(209, 176, 187)";
+    bookDisplay.style.padding = "10px";
+
+    let buttonDiv = document.createElement('div');
+    let deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    buttonDiv.appendChild(deleteButton);
+    bookDisplay.appendChild(buttonDiv);
+
+    let displayDiv = document.createElement('div');
+    displayDiv.textContent = myLibrary[0].info();
+    bookDisplay.appendChild(displayDiv);
 
     container.appendChild(bookDisplay);
-
-    let deleteButton = document.createElement('button');
-    bookDisplay.appendChild(deleteButton);
     /*addedBook();*/
 };
 
