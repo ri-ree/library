@@ -51,6 +51,9 @@ function submitClick(event) {
         bookDisplay.style.padding = "10px";
 
     container.appendChild(bookDisplay);
+
+    let deleteButton = document.createElement('button');
+    bookDisplay.appendChild(deleteButton);
     /*addedBook();*/
 };
 
