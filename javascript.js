@@ -55,6 +55,13 @@ function submitClick(event) {
     buttonDiv.appendChild(deleteButton);
     bookDisplay.appendChild(buttonDiv);
 
+    deleteButton.addEventListener("click", () => {
+    /*bookDisplay.remove();*/
+    if (bookDisplay.parentNode) {
+        bookDisplay.parentNode.removeChild(bookDisplay);
+      }
+    });
+
     let displayDiv = document.createElement('div');
     displayDiv.textContent = myLibrary[0].info();
     bookDisplay.appendChild(displayDiv);
