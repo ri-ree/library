@@ -56,13 +56,16 @@ function submitClick(event) {
     let readButton = document.createElement('button');
     readButton.textContent = 'Read';
     readButtonDiv.appendChild(readButton);
-    bookDisplay.appendChild(readButtonDiv);
 
     let buttonDiv = document.createElement('div');
     let deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
     buttonDiv.appendChild(deleteButton);
-    bookDisplay.appendChild(buttonDiv);
+
+    let buttonsDiv = document.createElement('div');
+    buttonsDiv.appendChild(readButtonDiv);
+    buttonsDiv.appendChild(buttonDiv);
+    bookDisplay.appendChild(buttonsDiv);
 
     deleteButton.addEventListener("click", () => {
         /*bookDisplay.remove();*/
