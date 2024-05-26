@@ -78,6 +78,11 @@ form button {
 
 #books > div > div:nth-child(1) {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*#books > div > div:nth-child(1) {
+    display: grid;
     justify-content: end;
     align-content: start;
-}
+}*/
