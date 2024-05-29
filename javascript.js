@@ -37,12 +37,6 @@ submitButton.addEventListener("click", submitClick, false);
     };
 }*/
 
-/*for (const obj of myLibrary) {
-    obj.dataset-indexNumber = indexNumber.toString()
-};*/
-
-let objIndexNumber = 0;
-
 function submitClick(event) {
 
     event.preventDefault();
@@ -57,12 +51,6 @@ function submitClick(event) {
     let bookDisplay = document.createElement('div');
     bookDisplay.style.background = "rgb(209, 176, 187)";
     bookDisplay.style.padding = "10px";
-
-    bookDisplay.dataset.indexNumber = objIndexNumber;
-
-    console.log(bookDisplay.dataset.indexNumber);
-
-    objIndexNumber++;
 
     let readButtonDiv = document.createElement('div');
     let readButton = document.createElement('button');
@@ -88,12 +76,13 @@ function submitClick(event) {
 
     let displayDiv = document.createElement('div');
 
+    let currentObj = myLibrary[0];
+
+    /*bookDisplay.dataset.indexNumber = currentObj;*/
+
     readButton.addEventListener("click", () => {
-        /*myLibrary[0].button();
-        displayDiv.textContent = myLibrary[0].info();
-        console.log(myLibrary);
-        console.log(myLibrary[0].info());*/
-        console.log(myLibrary[i]);
+        currentObj.button();
+        displayDiv.textContent = currentObj.info();
     });
 
 
