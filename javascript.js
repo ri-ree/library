@@ -27,16 +27,6 @@ function addBookToLibrary(title, author, pages, read) {
 
 submitButton.addEventListener("click", submitClick, false);
 
-/*function addedBook() {
-    for (const obj of myLibrary) {
-        let bookDisplay = document.createElement('div');
-        bookDisplay.textContent = obj.info();
-        bookDisplay.style.background = "rgb(209, 176, 187)";
-        bookDisplay.style.padding = "10px";
-        container.appendChild(bookDisplay);
-    };
-}*/
-
 function submitClick(event) {
 
     event.preventDefault();
@@ -78,8 +68,6 @@ function submitClick(event) {
 
     let currentObj = myLibrary[0];
 
-    /*bookDisplay.dataset.indexNumber = currentObj;*/
-
     readButton.addEventListener("click", () => {
         currentObj.button();
         displayDiv.textContent = currentObj.info();
@@ -91,18 +79,7 @@ function submitClick(event) {
     bookDisplay.appendChild(displayDiv);
 
     container.appendChild(bookDisplay);
-    /*addedBook();*/
 };
-
-
-/*for (const obj of myLibrary) {
-    let bookDisplay = document.createElement('div');
-    bookDisplay.textContent = obj.info();
-    bookDisplay.style.background = "rgb(209, 176, 187)";
-    bookDisplay.style.padding = "10px";
-    container.appendChild(bookDisplay);
-    console.log(obj);
-};*/
 
 btn.addEventListener("click", () => {
     dialog.showModal();
