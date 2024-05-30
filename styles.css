@@ -24,9 +24,14 @@
 }
 
 .header button {
+    border-style: solid;
     align-self: center;
     height: 50px;
     margin-left: 10px;
+    background-color: rgb(91, 90, 94);
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
 }
 
 .form-main-container {
@@ -92,9 +97,3 @@ form button {
     justify-content: end;
     align-content: start;
 }
-
-/*#books > div > div:nth-child(1) {
-    display: grid;
-    justify-content: end;
-    align-content: start;
-}*/
